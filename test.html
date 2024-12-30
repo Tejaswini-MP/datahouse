@@ -1,0 +1,33 @@
+<html>
+<style>
+#hidden_div {
+    display: none;
+}
+</style>
+<body>
+<input type="button" value="+" onclick="addRow()">
+
+<div id="content">
+<input type="text" name="name" value="" />
+<input type="text" name="value" value="" />
+<label><input type="checkbox" name="check" value="1" />Checked?</label>
+<input type="button" value="-" onclick="removeRow()">
+</div>
+
+<script>
+function addRow() {
+  const div = document.createElement('div');
+
+  div.className = 'row';
+
+  div.innerHTML = `
+    
+    <label> 
+      datavalue is charan
+    </label>
+  `;
+
+  document.getElementById('content').appendChild(div);
+}
+
+</script>
